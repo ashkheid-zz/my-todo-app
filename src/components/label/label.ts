@@ -1,11 +1,23 @@
 const container = document.getElementById('container');
 
-export function createLabel() {
-    const label = document.createElement('label');
+function createLabel(tagName: string, content: string);
 
-    label.id = 'my-label';
-    label.innerText = 'Hello World';
+function createLabel(tagName: string, idName: string, content: string) {
+    const newTag = document.createElement(tagName);
+
+    newTag.id = 'my-label';
+    newTag.innerText = 'Hello World';
 
     if (container)
-        container.appendChild(label);
+        container.appendChild(newTag);
+}
+
+function createLabel(tagName: string, idName: string, className: string, content: string) {
+    const newTag = document.createElement(tagName);
+
+    newTag.id = 'my-label';
+    newTag.innerText = 'Hello World';
+
+    if (container)
+        container.appendChild(newTag);
 }
